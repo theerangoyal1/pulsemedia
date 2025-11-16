@@ -3,84 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PulseMedia AI | AI-Powered Content for Local Businesses</title>
-  <meta name="description" content="PulseMedia AI creates AI-powered content, reels, and ads for gyms, cafés, tradies and local businesses so you can focus on running your business." />
+  <title>PulseMedia AI | Social Content for Melbourne Businesses</title>
+
+  <meta name="description" content="PulseMedia AI helps Melbourne gyms, cafés and local businesses stay consistent on social media with done-for-you posts, reels and captions. Simple monthly plans, no lock-in contracts." />
+  <meta property="og:title" content="PulseMedia AI | Done-for-you content for local businesses" />
+  <meta property="og:description" content="Posts, reels and captions handled for you so you can focus on running your business." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pulsemedia-ai.vercel.app" />
+  <meta property="og:site_name" content="PulseMedia AI" />
+
   <link rel="stylesheet" href="styles.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
+  <!-- HEADER -->
+  <header class="site-header">
     <div class="container header-inner">
-      <div class="logo">
-        <div class="logo-icon">
-          <span class="pulse-dot"></span>
-          <span class="pulse-line"></span>
+      <a href="#top" class="brand">
+        <div class="brand-mark">
+          <span class="brand-initial">P</span>
         </div>
-        <span class="logo-text">PulseMedia<span class="logo-accent">AI</span></span>
-      </div>
-      <nav class="nav">
+        <div class="brand-text">
+          <span class="brand-name">PulseMedia</span>
+          <span class="brand-sub">AI Social Studio</span>
+        </div>
+      </a>
+
+      <nav class="nav-desktop">
         <a href="#services" class="nav-link">Services</a>
         <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="#how-it-works" class="nav-link">How it works</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#contact" class="nav-link nav-cta">Free sample</a>
+        <a href="#portfolio" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link nav-link-cta">Free sample</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-mobile" aria-hidden="true">
+        <a href="#services" class="nav-mobile-link">Services</a>
+        <a href="#pricing" class="nav-mobile-link">Pricing</a>
+        <a href="#portfolio" class="nav-mobile-link">Work</a>
+        <a href="#about" class="nav-mobile-link">About</a>
+        <a href="#contact" class="nav-mobile-link nav-mobile-cta">Free sample</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <!-- HERO -->
-    <section class="hero">
+    <section class="section hero">
       <div class="container hero-inner">
-        <div class="hero-content">
-          <div class="hero-pill">📍 Melbourne • Local business content</div>
-          <h1>AI-powered content that grows your local business.</h1>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Melbourne • Social content studio</p>
+          <h1>Calm, consistent content for busy local businesses.</h1>
           <p class="hero-subtitle">
-            We create your posts, reels, ads and captions so you can focus on running your gym, café or trade business.
+            PulseMedia AI looks after your posts, reels and captions so you can stay focused on your clients, customers and team — not your Instagram feed.
           </p>
+
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Get a free sample</a>
-            <a href="#pricing" class="btn btn-outline">View pricing</a>
+            <a href="#contact" class="button primary">Request a free sample</a>
+            <a href="#pricing" class="button ghost">View monthly plans</a>
           </div>
-          <div class="hero-meta">
+
+          <div class="hero-trust">
             <div>
-              <p class="meta-label">Turnaround time</p>
-              <p class="meta-value">First week in 72 hours</p>
+              <p class="trust-label">Turnaround</p>
+              <p class="trust-value">First week in 72 hours</p>
             </div>
             <div>
-              <p class="meta-label">Content included</p>
-              <p class="meta-value">Reels • Posts • Captions</p>
+              <p class="trust-label">Lock-in contracts</p>
+              <p class="trust-value">None. Month-to-month.</p>
             </div>
             <div>
-              <p class="meta-label">Lock-in contracts</p>
-              <p class="meta-value">None. Cancel anytime.</p>
+              <p class="trust-label">For businesses like</p>
+              <p class="trust-value">Gyms · Cafés · Tradies</p>
             </div>
           </div>
         </div>
 
-        <div class="hero-panel">
+        <aside class="hero-panel reveal">
           <div class="hero-card">
-            <h2 class="hero-card-title">Monthly content, done for you.</h2>
-            <ul class="hero-checklist">
-              <li>12+ posts per month</li>
-              <li>High-performing reels</li>
-              <li>AI-written captions</li>
-              <li>Brand-matched designs</li>
+            <p class="hero-card-label">What we look after</p>
+            <h2>Everything your feed needs, handled.</h2>
+            <ul class="hero-list">
+              <li>Posts designed to match your brand</li>
+              <li>Short-form video for reels & TikTok</li>
+              <li>Captions written for local audiences</li>
+              <li>Simple calendar so you know what’s going out</li>
             </ul>
-            <div class="hero-stats">
-              <div>
-                <p class="stat-number">3–5 hrs</p>
-                <p class="stat-label">Time saved weekly</p>
-              </div>
-              <div>
-                <p class="stat-number">$199+</p>
-                <p class="stat-label">Simple monthly pricing</p>
-              </div>
+            <div class="hero-summary">
+              <p class="summary-number">3–5 hrs</p>
+              <p class="summary-text">Average time our clients save each week.</p>
             </div>
-            <p class="hero-note">Try us for a week, free. No card. No lock-in.</p>
+            <p class="hero-note">“We finally look as professional online as we do in person.” — Sample client</p>
           </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="section trust-strip">
+      <div class="container trust-strip-inner reveal">
+        <p class="trust-strip-heading">Built for owner-operators who don’t have a marketing team.</p>
+        <div class="trust-strip-items">
+          <span>Clear, fixed pricing</span>
+          <span>No confusing retainers</span>
+          <span>Content you approve each week</span>
         </div>
       </div>
     </section>
@@ -88,169 +121,213 @@
     <!-- SERVICES -->
     <section class="section" id="services">
       <div class="container">
-        <div class="section-header">
-          <h2>What we do for your business</h2>
-          <p>PulseMedia AI blends AI tools with human judgement to keep your socials consistent, clean and on-brand.</p>
+        <div class="section-header reveal">
+          <h2>What we do for you</h2>
+          <p>Think of PulseMedia AI as your quiet, reliable social media assistant — in the background, keeping everything consistent.</p>
         </div>
 
         <div class="grid-3">
-          <div class="card">
-            <div class="card-icon">🎥</div>
-            <h3>Reels & short-form video</h3>
-            <p>We turn your raw clips into engaging reels optimised for Instagram and TikTok to showcase your brand daily.</p>
-            <ul class="card-list">
-              <li>Cutting & sequencing</li>
-              <li>Captions & hooks</li>
-              <li>Music & timing</li>
+          <article class="card service-card reveal">
+            <h3>Social media planning</h3>
+            <p>We map out your weeks so you’re never wondering what to post tomorrow.</p>
+            <ul>
+              <li>Content calendars tailored to your business</li>
+              <li>Ideas that fit your offers and seasons</li>
+              <li>Simple approvals over email or Instagram DM</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="card-icon">🖼️</div>
-            <h3>Posts & carousels</h3>
-            <p>Modern Canva-designed graphics for promotions, tips, before & afters and customer highlights.</p>
-            <ul class="card-list">
-              <li>Brand-matched colours & fonts</li>
-              <li>Content calendar planning</li>
-              <li>Templates you keep forever</li>
+          <article class="card service-card reveal">
+            <h3>Design & posts</h3>
+            <p>Modern, clean posts designed to match your existing brand — no templates that look like everyone else’s.</p>
+            <ul>
+              <li>Carousels, announcements and promotions</li>
+              <li>Before/after and testimonial layouts</li>
+              <li>All built in Canva so you can edit later</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="card">
-            <div class="card-icon">✍️</div>
-            <h3>Captions, ads & ideas</h3>
-            <p>AI-assisted, human-edited captions and ad copy that speak to your local audience and get them in the door.</p>
-            <ul class="card-list">
-              <li>Hook-driven captions</li>
-              <li>Boosted post suggestions</li>
-              <li>Fresh ideas every week</li>
+          <article class="card service-card reveal">
+            <h3>Reels & captions</h3>
+            <p>You send raw clips; we turn them into finished reels and captions that actually sound like you.</p>
+            <ul>
+              <li>Hooks written for local audiences</li>
+              <li>Simple editing and on-brand subtitles</li>
+              <li>Ideas for what to film each week</li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- PRICING -->
-    <section class="section section-alt" id="pricing">
+    <section class="section section-soft" id="pricing">
       <div class="container">
-        <div class="section-header">
-          <h2>Simple monthly pricing</h2>
-          <p>No setup fee. No lock-in contracts. Upgrade or pause anytime.</p>
+        <div class="section-header reveal">
+          <h2>Simple monthly plans</h2>
+          <p>Clear inclusions. No setup fees. Pause or change plan any time.</p>
         </div>
 
         <div class="pricing-grid">
-          <div class="pricing-card">
+          <article class="pricing-card reveal">
             <h3>Starter</h3>
-            <p class="pricing-price">$199<span>/month</span></p>
-            <p class="pricing-tagline">Perfect for testing consistent content.</p>
-            <ul class="pricing-list">
-              <li>✔ 12 Instagram posts</li>
-              <li>✔ 4 captions per week</li>
-              <li>✔ Basic content calendar</li>
-              <li>✔ 10 AI-generated images</li>
+            <p class="price">$199<span>/month</span></p>
+            <p class="price-note">For businesses wanting to get consistent.</p>
+            <ul>
+              <li>8–10 posts per month</li>
+              <li>Caption writing for each post</li>
+              <li>Light content calendar</li>
+              <li>Email support</li>
             </ul>
-            <a href="#contact" class="btn btn-outline full-width">Start with Starter</a>
-          </div>
+            <a href="#contact" class="button subtle full">Start with Starter</a>
+          </article>
 
-          <div class="pricing-card pricing-featured">
-            <div class="badge">Most popular</div>
+          <article class="pricing-card featured reveal">
+            <p class="badge">Most chosen</p>
             <h3>Growth</h3>
-            <p class="pricing-price">$299<span>/month</span></p>
-            <p class="pricing-tagline">For gyms, cafés and tradies ready to grow.</p>
-            <ul class="pricing-list">
-              <li>✔ 12 posts</li>
-              <li>✔ 4 reels / month</li>
-              <li>✔ Full caption writing</li>
-              <li>✔ 20 AI-generated images</li>
-              <li>✔ Monthly performance summary</li>
+            <p class="price">$299<span>/month</span></p>
+            <p class="price-note">Our core package for gyms, cafés and trades.</p>
+            <ul>
+              <li>12 posts per month</li>
+              <li>4 reels / short videos</li>
+              <li>All captions written for you</li>
+              <li>Monthly performance summary</li>
             </ul>
-            <a href="#contact" class="btn btn-primary full-width">Choose Growth</a>
-          </div>
+            <a href="#contact" class="button primary full">Choose Growth</a>
+          </article>
 
-          <div class="pricing-card">
+          <article class="pricing-card reveal">
             <h3>Premium</h3>
-            <p class="pricing-price">$399<span>/month</span></p>
-            <p class="pricing-tagline">For brands that want everything handled.</p>
-            <ul class="pricing-list">
-              <li>✔ 16 posts</li>
-              <li>✔ 8 reels / month</li>
-              <li>✔ Ads setup & boosting guidance</li>
-              <li>✔ AI auto-reply suggestions</li>
-              <li>✔ Detailed monthly report</li>
+            <p class="price">$399<span>/month</span></p>
+            <p class="price-note">For owners who want their socials fully handled.</p>
+            <ul>
+              <li>16 posts per month</li>
+              <li>8 reels / short videos</li>
+              <li>Ideas and prompts for what to film</li>
+              <li>Quarterly strategy check-in</li>
             </ul>
-            <a href="#contact" class="btn btn-outline full-width">Talk about Premium</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="section" id="how-it-works">
-      <div class="container">
-        <div class="section-header">
-          <h2>How it works</h2>
-          <p>We designed PulseMedia AI to be stupidly simple — send us a few details and we handle the rest.</p>
+            <a href="#contact" class="button subtle full">Talk about Premium</a>
+          </article>
         </div>
 
-        <div class="steps">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Claim your free sample</h3>
-            <p>DM us or fill out the form below. We’ll ask for your Instagram handle, logo and a short description of your brand.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>Review your content pack</h3>
-            <p>Within 72 hours you’ll receive a mini content pack: posts, reels concepts and captions tailored to your business.</p>
-          </div>
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>Start your monthly plan</h3>
-            <p>If you like the content, choose a plan. We deliver your content weekly so you’re always ahead.</p>
-          </div>
-        </div>
+        <p class-name="pricing-footnote reveal">
+          All plans are month-to-month with no lock-in. You approve content before it goes live.
+        </p>
       </div>
     </section>
 
     <!-- PORTFOLIO -->
-    <section class="section section-alt" id="portfolio">
+    <section class="section" id="portfolio">
       <div class="container">
-        <div class="section-header">
-          <h2>Example content packs</h2>
-          <p>Here’s the style of content we create for different local businesses.</p>
+        <div class="section-header reveal">
+          <h2>What our work tends to look like</h2>
+          <p>Every business is different, but these are the types of posts and reels we typically create.</p>
         </div>
 
         <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <h3>Gyms & PTs</h3>
-            <p>High-energy, educational and community-focused content.</p>
+          <article class="portfolio-card reveal">
+            <h3>Gyms & PT studios</h3>
+            <p>Education-first content that builds trust and shows your coaching style.</p>
             <ul>
-              <li>“3 mistakes killing your progress” carousel</li>
-              <li>Form tip reels (squats, deadlifts, push-ups)</li>
-              <li>Member spotlights & transformation posts</li>
-              <li>Pre-workout snack ideas & myth-busting</li>
+              <li>“3 form tips” carousel posts</li>
+              <li>Technique reels for lifts and movements</li>
+              <li>Member stories and transformation tiles</li>
+              <li>Timetable and offer announcements</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="portfolio-card">
+          <article class="portfolio-card reveal">
             <h3>Cafés & hospitality</h3>
-            <p>Aesthetic visuals and daily specials that keep you top-of-mind.</p>
+            <p>Warm, inviting visuals that make people want to drop in.</p>
             <ul>
-              <li>Daily specials & menu highlights</li>
-              <li>Behind-the-scenes coffee reels</li>
-              <li>Team introductions & customer reviews</li>
-              <li>Seasonal drink & food launches</li>
+              <li>Daily special and seasonal menu posts</li>
+              <li>Behind-the-machine coffee reels</li>
+              <li>Team introductions and regulars’ stories</li>
+              <li>Weekend booking reminders</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="portfolio-card">
-            <h3>Tradies & local services</h3>
-            <p>Professional, trustworthy content that shows your workmanship.</p>
+          <article class="portfolio-card reveal">
+            <h3>Trades & local services</h3>
+            <p>Straightforward content that showcases reliability and quality work.</p>
             <ul>
-              <li>Before & after project posts</li>
-              <li>Tool & material “why we use this” posts</li>
-              <li>Safety tip of the week</li>
-              <li>Team & worksite behind-the-scenes</li>
+              <li>Before/after project galleries</li>
+              <li>“Why we do it this way” explainers</li>
+              <li>On-site behind-the-scenes snippets</li>
+              <li>Client testimonial posts</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section-soft" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>What it feels like to work together</h2>
+          <p>These are the kinds of notes we aim to receive from every client.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <figure class="testimonial reveal">
+            <blockquote>
+              “We always meant to post more, but it just never happened. Now it’s off our plate and our feed finally looks like our gym feels.”
+            </blockquote>
+            <figcaption>
+              <span class="t-name">Owner, independent gym</span>
+              <span class="t-meta">Melbourne</span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial reveal">
+            <blockquote>
+              “Everything is clear, calm and organised. I know exactly what’s being posted each week without having to think about it.”
+            </blockquote>
+            <figcaption>
+              <span class="t-name">Café manager</span>
+              <span class="t-meta">Inner-city café</span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial reveal">
+            <blockquote>
+              “Our Instagram finally matches the quality of work we do on site. The before and after posts are simple but so effective.”
+            </blockquote>
+            <figcaption>
+              <span class="t-name">Small building firm</span>
+              <span class="t-meta">Eastern suburbs</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-text reveal">
+          <p class="eyebrow">About PulseMedia AI</p>
+          <h2>Built for owner-operators who care about the details.</h2>
+          <p>
+            PulseMedia AI is a small studio focused on one thing: keeping your business visible online in a way that feels considered, not chaotic.
+          </p>
+          <p>
+            We combine AI tools with careful human review so you’re not paying for a big agency, but you still get thoughtful, on-brand content that respects your reputation.
+          </p>
+          <p>
+            You’ll never be handed a login to a complicated system. We keep communication simple and human — usually via email and Instagram DM.
+          </p>
+        </div>
+
+        <div class="about-panel reveal">
+          <div class="about-card">
+            <h3>What you can expect</h3>
+            <ul>
+              <li>Clear communication and realistic timelines</li>
+              <li>Content that feels like <em>you</em>, not generic templates</li>
+              <li>No pressure to “go viral” — just steady, quality presence</li>
+              <li>Respect for your brand and your customers</li>
             </ul>
           </div>
         </div>
@@ -258,81 +335,89 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="section contact-section" id="contact">
+    <section class="section section-soft" id="contact">
       <div class="container contact-grid">
-        <div>
-          <h2>Get your free sample week</h2>
-          <p>Tell us a bit about your business and we’ll send a free mini content pack — no payment details, no lock-in.</p>
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Next steps</p>
+          <h2>Request a free, no-obligation sample week.</h2>
+          <p>
+            Share a few details below and we’ll put together a small content pack for your business — typically 3 post ideas, 1 reel concept and caption drafts.
+          </p>
 
-          <div class="contact-highlight">
-            <p><strong>What you get:</strong></p>
+          <div class="contact-notes">
+            <p><strong>What you’ll receive:</strong></p>
             <ul>
-              <li>✅ 3 example posts</li>
-              <li>✅ 1 reel concept</li>
-              <li>✅ Caption ideas</li>
+              <li>Examples tailored to your business type</li>
+              <li>No pushy sales calls or lock-in</li>
+              <li>A clear sense of whether we’re a good fit</li>
             </ul>
           </div>
 
-          <p class="contact-note">
-            Prefer Instagram? DM <strong>@pulsemdeia.ai</strong> with <strong>“trial”</strong>. (Update this with your actual handle.)
+          <p class="contact-alt">
+            Prefer Instagram? DM <strong>@pulsemedia.ai</strong> with the word <strong>“sample”</strong>.
           </p>
         </div>
 
-        <form class="contact-form" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
-          <!-- Replace YOUR_EMAIL_HERE with your email address -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="New lead from PulseMedia AI site">
-          <input type="hidden" name="_template" value="table">
+        <form class="contact-form reveal" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+          <!-- TODO: replace YOUR_EMAIL_HERE with your real email -->
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_subject" value="New PulseMedia AI enquiry" />
+          <input type="hidden" name="_template" value="table" />
 
-          <label class="form-field">
+          <label class="field">
             <span>Full name</span>
-            <input type="text" name="Name" placeholder="Alex from Local Gym" required>
+            <input type="text" name="Name" placeholder="Alex from Local Gym" required />
           </label>
 
-          <label class="form-field">
+          <label class="field">
             <span>Business name</span>
-            <input type="text" name="Business" placeholder="Pulse Strength Club" required>
+            <input type="text" name="Business" placeholder="Pulse Strength Club" required />
           </label>
 
-          <label class="form-field">
+          <label class="field">
             <span>Email</span>
-            <input type="email" name="Email" placeholder="you@example.com" required>
+            <input type="email" name="Email" placeholder="you@example.com" required />
           </label>
 
-          <label class="form-field">
+          <label class="field">
             <span>Instagram handle</span>
-            <input type="text" name="Instagram" placeholder="@yourbusiness" required>
+            <input type="text" name="Instagram" placeholder="@yourbusiness" required />
           </label>
 
-          <label class="form-field">
-            <span>What type of business?</span>
+          <label class="field">
+            <span>Business type</span>
             <select name="Business Type" required>
-              <option value="">Select...</option>
-              <option>Gym / PT</option>
-              <option>Café / Restaurant</option>
-              <option>Tradie / Construction</option>
-              <option>Health / Physio / Chiro</option>
-              <option>Real estate / Services</option>
+              <option value="">Select…</option>
+              <option>Gym / PT studio</option>
+              <option>Café / restaurant</option>
+              <option>Trade / construction</option>
+              <option>Health / physio / chiro</option>
+              <option>Professional services</option>
               <option>Other</option>
             </select>
           </label>
 
-          <label class="form-field">
-            <span>What do you want from your content?</span>
-            <textarea name="Goals" rows="3" placeholder="More leads, better brand, stay consistent on socials, etc."></textarea>
+          <label class="field">
+            <span>What would you like your content to achieve?</span>
+            <textarea name="Goals" rows="3" placeholder="Stay consistent on Instagram, look more professional online, promote new offers…"></textarea>
           </label>
 
-          <button type="submit" class="btn btn-primary full-width">Send my free sample</button>
-          <p class="form-footnote">You’ll hear back within 24 hours.</p>
+          <button type="submit" class="button primary full">Send request</button>
+          <p class="form-footnote">You’ll receive a reply within one business day.</p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> PulseMedia AI. All rights reserved.</p>
-      <p class="footer-small">Built with AI + caffeine in Melbourne.</p>
+      <div class="footer-brand">
+        <span class="footer-name">PulseMedia AI</span>
+        <span class="footer-sub">Social content studio, based in Melbourne.</span>
+      </div>
+      <div class="footer-meta">
+        <span id="year"></span> · All rights reserved.
+      </div>
     </div>
   </footer>
 
