@@ -358,11 +358,23 @@
           </p>
         </div>
 
-        <form class="contact-form reveal" action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
-          <!-- TODO: replace YOUR_EMAIL_HERE with your real email -->
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_subject" value="New PulseMedia AI enquiry" />
-          <input type="hidden" name="_template" value="table" />
+        <!-- ★★★ UPDATED CONTACT FORM ★★★ -->
+        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/ai.pulsemedia.ai@gmail.com" method="POST">
+
+          <!-- Disable captcha -->
+          <input type="hidden" name="_captcha" value="false">
+
+          <!-- Subject line -->
+          <input type="hidden" name="_subject" value="New PulseMedia AI enquiry">
+
+          <!-- Nicer email table formatting -->
+          <input type="hidden" name="_template" value="table">
+
+          <!-- Success message redirect disabled, we show message on page -->
+          <input type="hidden" name="_next" value="">
+
+          <!-- Honeypot anti-spam field -->
+          <input type="text" name="_honey" style="display:none">
 
           <label class="field">
             <span>Full name</span>
@@ -403,7 +415,12 @@
           </label>
 
           <button type="submit" class="button primary full">Send request</button>
-          <p class="form-footnote">You’ll receive a reply within one business day.</p>
+
+          <!-- SUCCESS MESSAGE SLOT -->
+          <p id="formSuccess" class="form-footnote" style="display:none; color:#0a7f42; font-weight:600; margin-top:12px;">
+            Thanks — we’ll reply within one business day.
+          </p>
+
         </form>
       </div>
     </section>
@@ -424,4 +441,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
