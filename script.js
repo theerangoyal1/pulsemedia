@@ -63,3 +63,18 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach(el => el.classList.add("visible"));
   }
 });
+// Contact form success handler
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const success = document.getElementById("formSuccess");
+
+  if (form) {
+    form.addEventListener("submit", function () {
+      setTimeout(() => {
+        success.style.display = "block";
+        form.reset();
+      }, 500);
+    });
+  }
+});
+
