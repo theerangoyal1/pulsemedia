@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="styles.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="prepreconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -210,7 +210,7 @@
           </article>
         </div>
 
-        <p class-name="pricing-footnote reveal">
+        <p class="pricing-footnote reveal">
           All plans are month-to-month with no lock-in. You approve content before it goes live.
         </p>
       </div>
@@ -313,10 +313,10 @@
             PulseMedia AI is a small studio focused on one thing: keeping your business visible online in a way that feels considered, not chaotic.
           </p>
           <p>
-            We combine AI tools with careful human review so you’re not paying for a big agency, but you still get thoughtful, on-brand content that respects your reputation.
+            We combine AI tools with carefully refined human review so you’re not paying for a large agency, but still get thoughtful, on-brand content.
           </p>
           <p>
-            You’ll never be handed a login to a complicated system. We keep communication simple and human — usually via email and Instagram DM.
+            We keep communication simple and human — usually via email and Instagram DM.
           </p>
         </div>
 
@@ -327,7 +327,7 @@
               <li>Clear communication and realistic timelines</li>
               <li>Content that feels like <em>you</em>, not generic templates</li>
               <li>No pressure to “go viral” — just steady, quality presence</li>
-              <li>Respect for your brand and your customers</li>
+              <li>Respect for your brand and customers</li>
             </ul>
           </div>
         </div>
@@ -341,7 +341,7 @@
           <p class="eyebrow">Next steps</p>
           <h2>Request a free, no-obligation sample week.</h2>
           <p>
-            Share a few details below and we’ll put together a small content pack for your business — typically 3 post ideas, 1 reel concept and caption drafts.
+            Share a few details below and we’ll put together a small content pack — typically 3 post ideas, 1 reel concept and caption drafts.
           </p>
 
           <div class="contact-notes">
@@ -358,23 +358,13 @@
           </p>
         </div>
 
-        <!-- ★★★ UPDATED CONTACT FORM ★★★ -->
-        <form class="contact-form reveal" id="contactForm" action="https://formsubmit.co/ai.pulsemedia.ai@gmail.com" method="POST">
-
-          <!-- Disable captcha -->
-          <input type="hidden" name="_captcha" value="false">
-
-          <!-- Subject line -->
-          <input type="hidden" name="_subject" value="New PulseMedia AI enquiry">
-
-          <!-- Nicer email table formatting -->
-          <input type="hidden" name="_template" value="table">
-
-          <!-- Success message redirect disabled, we show message on page -->
-          <input type="hidden" name="_next" value="">
-
-          <!-- Honeypot anti-spam field -->
-          <input type="text" name="_honey" style="display:none">
+        <!-- CONTACT FORM -->
+        <form id="contactForm" class="contact-form reveal">
+          
+          <!-- Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="54a94af1-da32-4389-9db3-5ea9f8b4bc61" />
+          <input type="hidden" name="subject" value="New PulseMedia AI enquiry" />
+          <input type="hidden" name="from_name" value="PulseMedia AI Website" />
 
           <label class="field">
             <span>Full name</span>
@@ -415,12 +405,7 @@
           </label>
 
           <button type="submit" class="button primary full">Send request</button>
-
-          <!-- SUCCESS MESSAGE SLOT -->
-          <p id="formSuccess" class="form-footnote" style="display:none; color:#0a7f42; font-weight:600; margin-top:12px;">
-            Thanks — we’ll reply within one business day.
-          </p>
-
+          <p class="form-footnote" id="formStatus"></p>
         </form>
       </div>
     </section>
