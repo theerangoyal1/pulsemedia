@@ -15,9 +15,10 @@
   <link rel="stylesheet" href="styles.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="prepreconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <!-- HEADER -->
   <header class="site-header">
@@ -313,10 +314,10 @@
             PulseMedia AI is a small studio focused on one thing: keeping your business visible online in a way that feels considered, not chaotic.
           </p>
           <p>
-            We combine AI tools with carefully refined human review so you’re not paying for a large agency, but still get thoughtful, on-brand content.
+            We combine AI tools with careful human review so you’re not paying for a big agency, but you still get thoughtful, on-brand content that respects your reputation.
           </p>
           <p>
-            We keep communication simple and human — usually via email and Instagram DM.
+            You’ll never be handed a login to a complicated system. We keep communication simple and human — usually via email and Instagram DM.
           </p>
         </div>
 
@@ -327,7 +328,7 @@
               <li>Clear communication and realistic timelines</li>
               <li>Content that feels like <em>you</em>, not generic templates</li>
               <li>No pressure to “go viral” — just steady, quality presence</li>
-              <li>Respect for your brand and customers</li>
+              <li>Respect for your brand and your customers</li>
             </ul>
           </div>
         </div>
@@ -341,7 +342,7 @@
           <p class="eyebrow">Next steps</p>
           <h2>Request a free, no-obligation sample week.</h2>
           <p>
-            Share a few details below and we’ll put together a small content pack — typically 3 post ideas, 1 reel concept and caption drafts.
+            Share a few details below and we’ll put together a small content pack for your business — typically 3 post ideas, 1 reel concept and caption drafts.
           </p>
 
           <div class="contact-notes">
@@ -360,8 +361,7 @@
 
         <!-- CONTACT FORM -->
         <form id="contactForm" class="contact-form reveal">
-          
-          <!-- Web3Forms Access Key -->
+          <!-- Web3Forms config -->
           <input type="hidden" name="access_key" value="54a94af1-da32-4389-9db3-5ea9f8b4bc61" />
           <input type="hidden" name="subject" value="New PulseMedia AI enquiry" />
           <input type="hidden" name="from_name" value="PulseMedia AI Website" />
@@ -404,7 +404,10 @@
             <textarea name="Goals" rows="3" placeholder="Stay consistent on Instagram, look more professional online, promote new offers…"></textarea>
           </label>
 
-          <button type="submit" class="button primary full">Send request</button>
+          <button type="submit" class="button primary full" id="submitButton">
+            Send request
+          </button>
+
           <p class="form-footnote" id="formStatus"></p>
         </form>
       </div>
@@ -422,6 +425,15 @@
       </div>
     </div>
   </footer>
+
+  <!-- Success modal -->
+  <div class="modal-backdrop" id="successModal">
+    <div class="modal">
+      <h3>Request received</h3>
+      <p>Thanks for getting in touch. You’ll receive your sample content pack within one business day.</p>
+      <button class="button primary" id="closeModal">Back to site</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
