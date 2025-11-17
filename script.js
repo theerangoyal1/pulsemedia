@@ -1,80 +1,77 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Footer year
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
+/* ---------------------------------------------
+   MOBILE NAV TOGGLE
+--------------------------------------------- */
+const navToggle = document.querySelector(".nav-toggle");
+const mobileNav = document.querySelector(".nav-mobile");
 
-  // Mobile navigation toggle
-  const navToggle = document.querySelector(".nav-toggle");
-  const mobileNav = document.querySelector(".nav-mobile");
-
-  if (navToggle && mobileNav) {
-    navToggle.addEventListener("click", () => {
-      const isOpen = mobileNav.classList.toggle("open");
-      navToggle.classList.toggle("active", isOpen);
-      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      mobileNav.setAttribute("aria-hidden", isOpen ? "false" : "true");
-    });
-
-    // Close mobile nav when clicking a link
-    mobileNav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileNav.classList.remove("open");
-        navToggle.classList.remove("active");
-        navToggle.setAttribute("aria-expanded", "false");
-        mobileNav.setAttribute("aria-hidden", "true");
-      });
-    });
-  }
-
-  // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    const targetId = link.getAttribute("href");
-    if (!targetId || targetId === "#") return;
-    const target = document.querySelector(targetId);
-    if (!target) return;
-
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", !expanded);
+    mobileNav.setAttribute("aria-hidden", expanded);
+    mobileNav.classList.toggle("open");
   });
+}
 
-  // Reveal-on-scroll animations
-  const revealElements = document.querySelectorAll(".reveal");
+/* ---------------------------------------------
+   SCROLL REVEAL ANIMATIONS
+--------------------------------------------- */
+const revealElements = document.querySelectorAll(".reveal");
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
+const revealOnScroll = () => {
+  revealElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 80) {
+      el.classList.add("visible");
+    }
+  });
+};
 
-    revealElements.forEach(el => observer.observe(el));
-  } else {
-    // Fallback: show all
-    revealElements.forEach(el => el.classList.add("visible"));
-  }
-});
-// Contact form success handler
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
-  const success = document.getElementById("formSuccess");
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 
-  if (form) {
-    form.addEventListener("submit", function () {
-      setTimeout(() => {
-        success.style.display = "block";
-        form.reset();
-      }, 500);
-    });
-  }
-});
+/* ---------------------------------------------
+   CONTACT FORM (WEB3FORMS INTEGRATION)
+--------------------------------------------- */
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
 
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    formStatus.textContent = "Sending...";
+    formStatus.style.color = "#444";
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        formStatus.textContent = "Thank you! Your sample request has been sent.";
+        formStatus.style.color = "#2a7f4f";
+        contactForm.reset();
+      } else {
+        formStatus.textContent = "Something went wrong. Please try again.";
+        formStatus.style.color = "#b82e2e";
+      }
+    } catch (error) {
+      formStatus.textContent = "Network error — try again later.";
+      formStatus.style.color = "#b82e2e";
+    }
+  });
+}
+
+/* ---------------------------------------------
+   FOOTER YEAR AUTO-UPDATE
+--------------------------------------------- */
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
